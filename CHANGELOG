@@ -1,3 +1,7 @@
+v1.0.1
+------
+- MINOR FIX: Changed text 'segundos' to 'seconds' in Perguntados::createGame
+
 v1.0.0
 ------
 - Initial release

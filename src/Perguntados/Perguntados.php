@@ -178,7 +178,7 @@ class Perguntados extends Base {
 	public function createGame(Opponent $opponent = NULL, $language = 'PT')
 	{
 		if ($this->lives <= 0) {
-			throw new Exception('Not enough lives. Wait '.$this->nextIncrement.' segundos.');
+			throw new Exception('Not enough lives. Wait '.$this->nextIncrement.' seconds.');
 		}
 		if ($opponent != NULL) {
 			$post = [
