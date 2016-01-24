@@ -1,0 +1,23 @@
+{
+    "name": "juniorfontenele/perguntados",
+    "description": "API for Preguntados Game from Etermax",
+    "require": {
+        "php": ">=5.5.9",
+        "guzzlehttp/guzzle": "^6.1",
+        "vlucas/phpdotenv": "^2.2",
+        "league/oauth2-facebook": "^1.1",
+        "nesbot/carbon": "^1.21"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Junior Fontenele",
+            "email": "lcbfjr@gmail.com"
+        }
+    ],
+	"autoload": {
+        "psr-4": {
+            "Perguntados\\": "src/Perguntados/"
+        }
+    }
+}

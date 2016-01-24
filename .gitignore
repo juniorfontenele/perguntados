@@ -1,0 +1,8 @@
+/vendor
+/.idea
+/tests
+/src/Sync
+composer.phar
+.DS_Store
+config.php
+.env
