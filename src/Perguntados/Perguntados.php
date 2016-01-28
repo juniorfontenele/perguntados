@@ -259,7 +259,7 @@ class Perguntados extends Base {
 	 * @param DuelGame $game
 	 * @param array $questions
 	 * @param int $finishTime
-	 * @return boolean|Game
+	 * @return bool|Game
 	 * @throws Exception
 	 */
 	public function postDuelAnswers(DuelGame &$game = NULL, array $questions = NULL, $finishTime = 30432)
@@ -308,5 +308,16 @@ class Perguntados extends Base {
 			$this->answerQuestion($game);
 		}
 		return $game;
+	}
+
+	/**
+	 * @return bool|Game
+	 * @throws Exception
+	 */
+	public function winRandomDuel()
+	{
+		$duel = $this->findDuel();
+		$questions = $this->getDuelQuestions($duel);
+		return $this->postDuelAnswers($duel, $questions);
 	}
 }

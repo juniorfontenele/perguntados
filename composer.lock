@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3592f3db4c4ed305c6f236aa3373ee26",
-    "content-hash": "033835ab135270ee82934ff402d5d84c",
+    "hash": "561e632cfabb05dee4e8d3cf87b04706",
+    "content-hash": "4f151fbb28aff979c298aaaf7bc3d06a",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -335,57 +335,6 @@
                 "single sign on"
             ],
             "time": "2016-01-23 18:02:07"
-        },
-        {
-            "name": "league/oauth2-facebook",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/oauth2-facebook.git",
-                "reference": "0cd44ead57f05f7b8b728dcbf20bab1b56990718"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/oauth2-facebook/zipball/0cd44ead57f05f7b8b728dcbf20bab1b56990718",
-                "reference": "0cd44ead57f05f7b8b728dcbf20bab1b56990718",
-                "shasum": ""
-            },
-            "require": {
-                "league/oauth2-client": "~1.0",
-                "php": ">=5.5.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "~0.9",
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "~2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "League\\OAuth2\\Client\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sammy Kaye Powers",
-                    "email": "me@sammyk.me",
-                    "homepage": "http://www.sammyk.me"
-                }
-            ],
-            "description": "Facebook OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
-            "keywords": [
-                "Authentication",
-                "authorization",
-                "client",
-                "facebook",
-                "oauth",
-                "oauth2"
-            ],
-            "time": "2015-09-16 22:00:46"
         },
         {
             "name": "nesbot/carbon",

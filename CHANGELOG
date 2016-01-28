@@ -1,3 +1,8 @@
+v1.0.3
+------
+- IMPROVEMENT: Removed unused Facebook packages
+- IMPROVEMENT: Changed README file
+
 v1.0.2
 ------
 - NEW FEATURE: New method to get and set an ID: 'Base::id()'
