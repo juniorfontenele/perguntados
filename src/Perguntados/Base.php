@@ -16,9 +16,21 @@ class Base {
 
 	/**
 	 * @param string $id
+	 * @return string
+	 */
+	public function id($id = NULL)
+	{
+		if ($id != NULL) {
+			$this->id = (string)$id;
+		}
+		return (string)$id;
+	}
+
+	/**
+	 * @param string $id
 	 * @return mixed $this
 	 */
-	public function setid($id)
+	public function setId($id)
 	{
 		$this->id = (string)$id;
 		return $this;
