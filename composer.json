@@ -4,7 +4,7 @@
     "require": {
         "php": ">=5.5.9",
         "guzzlehttp/guzzle": "^6.1",
-        "vlucas/phpdotenv": "^2.1",
+        "vlucas/phpdotenv": ">=1.*",
         "nesbot/carbon": "^1.21"
     },
     "license": "MIT",
