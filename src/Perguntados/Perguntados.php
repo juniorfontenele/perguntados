@@ -8,7 +8,7 @@ use GuzzleHttp\Client;
 class Perguntados extends Base {
 
 	private $url;
-	private $user_id;
+	private $userId;
 	private $headers;
 	private $conn;
 	private $guzzleConf;
@@ -34,7 +34,7 @@ class Perguntados extends Base {
 		$this->extraShots = (int)0;
 		$this->games = [];
 		$this->url = getenv('APP_URL');
-		$this->user_id = getenv('USER_ID');
+		$this->userId = getenv('USER_ID');
 		$this->headers = [
 			'Cookie' => 'ap_session='.getenv('APP_COOKIE'),
 			'Eter-Agent' => '1|iOS-AppStr|iPhone7,2|0|iOS 9.1|0|2.3.0.1|pt-BR|pt-BR|BR|1',
@@ -62,7 +62,7 @@ class Perguntados extends Base {
 	 */
 	private function _connect()
 	{
-		$res = $this->conn->request('GET', 'api/users/'.$this->user_id.'/dashboard?');
+		$res = $this->conn->request('GET', 'api/users/'.$this->userId.'/dashboard?');
 		if ($res->getStatusCode() != '200') {
 			throw new Exception("Can't get dashboard statistics");
 		}
@@ -161,7 +161,7 @@ class Perguntados extends Base {
 			]],
 			'type' => $game->getSpin()->getType()
 		];
-		$res = $this->conn->request('POST', 'api/users/'.$this->user_id.'/games/'.$game->getGameId().'/answers', ['json' => $post]);
+		$res = $this->conn->request('POST', 'api/users/'.$this->userId.'/games/'.$game->getGameId().'/answers', ['json' => $post]);
 		if ($res->getStatusCode() != '200') {
 			throw new Exception("Can't answer question");
 		}
@@ -193,7 +193,7 @@ class Perguntados extends Base {
 		else {
 			$post = [];
 		}
-		$res = $this->conn->request('POST', 'api/users/'.$this->user_id.'/games', ['json' => $post]);
+		$res = $this->conn->request('POST', 'api/users/'.$this->userId.'/games', ['json' => $post]);
 		if ($res->getStatusCode() != '200') {
 			return false;
 		}
@@ -216,7 +216,7 @@ class Perguntados extends Base {
 			'type' => 'DUEL_GAME',
 			'language' => $language
 		];
-		$res = $this->conn->request('POST', 'api/users/'.$this->user_id.'/rooms', ['json' => $post]);
+		$res = $this->conn->request('POST', 'api/users/'.$this->userId.'/rooms', ['json' => $post]);
 		if ($res->getStatusCode() != '200') {
 			throw new Exception("Can't get Duel room");
 		}
@@ -237,7 +237,7 @@ class Perguntados extends Base {
 		if (!$game) {
 			throw new Exception("Parameter 'game' is required");
 		}
-		$res = $this->conn->request('GET', 'api/users/'.$this->user_id.'/rooms/'.$game->getId());
+		$res = $this->conn->request('GET', 'api/users/'.$this->userId.'/rooms/'.$game->getId());
 		if ($res->getStatusCode() != '200') {
 			throw new Exception("Can't get game questions");
 		}
@@ -278,7 +278,7 @@ class Perguntados extends Base {
 			];
 			$post['answers'][] = $answer;
 		}
-		$res = $this->conn->request('POST', 'api/users/'.$this->user_id.'/games/'.$game->getId().'/answers', ['json' => $post]);
+		$res = $this->conn->request('POST', 'api/users/'.$this->userId.'/games/'.$game->getId().'/answers', ['json' => $post]);
 		if ($res->getStatusCode() != '200') {
 			throw new Exception("Can't post game answers");
 		}
